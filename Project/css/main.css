@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    --prompt-font-family: 'Prompt', sans-serif;
+    --montserrat-font-family: 'Montserrat', sans-serif;
+    --bg-pale-orange: #FFF8F8;
+}
+
+
+/* start nav */
+
+nav{
+    position: fixed;
+    background-color: #fff;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(199, 199, 199, 0.5);
+    font-family: var(--montserrat-font-family);
+}
+
+a{
+    text-decoration: none;
+    color: #131313;
+}
+
+nav .title{
+    font-weight: 700;
+}
+
+nav .title:hover{
+    color: #5ec9ff;
+}
+
+nav .nav-items{
+    position: relative;
+    display: inline-flex;
+    justify-content: space-between;
+    transform: translateY(8px);
+    font-weight: 600;
+}
+
+nav .nav-items ul li{
+    list-style: none;
+    display: inline-flex;
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+nav .nav-items ul li a:after, nav .title:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #5ec9ff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav .nav-items ul li:hover{
+    color: #777FDF;
+    
+}
+
+nav .nav-items ul li a:hover:after, nav .title:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav .nav-items ul li a i{
+    position: relative;
+    top: 3px;
+}
+
+body{
+    background-color: #fff;
+}
+
+/* stop sign */
+section.hugetext .text{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #131313;
+    font-family: var(--prompt-font-family);
+}
+
+.hover{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #131313;
+    font-family: var(--prompt-font-family);
+}
+
+.hover:hover{
+    color: #ffa75e;
+}
+
+.hover:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    margin-top: 30px;
+    left: 0px;
+    background-color: #ffa75e;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* end stop sgin */
+
+/* login / register */
+section.login{
+    margin-top: 120px;
+    margin-bottom: 100px;
+    font-family: var(--prompt-font-family);
+}
+
+section.login p{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+section.login .container form{
+    background-color: #FFF3F3;
+    border-radius: 30px;
+    height: 350px;
+    width: 550px;
+}
+
+section.login .container form .txt_field{
+    margin-top: 40px;
+}
+
+section.login .container form .txt_field input{
+    border: none;
+    background-color: #fff;
+    border-radius: 30px;
+    width: 300px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 50px;
+}
+
+section.login .container input[name="btn_login"]{
+    margin-top: 45px;
+    width: 200px;
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #C8BFBF;
+}
+
+section.login .container form label{
+    margin-right: 10px;
+    margin-top: 12.5px;
+}
+
+section.register_text{
+    margin-top: 25px;
+    font-family: var(--prompt-font-family);
+}
+
+section.register_text .container p{
+    font-size: 15;
+    font-weight: 300;
+}
+
+section.register_text .container a{
+    text-decoration: underline;
+    font-size: 15;
+    font-weight: 300;
+}
+section.register_text .container a:hover{
+    color: #ec8b8b;
+}
+
+section.register{
+    font-family: var(--prompt-font-family);
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+section.register p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+section.register .underline{
+    width: 500px;
+    height: 30px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    border-bottom: #a0a0a0 1px solid;
+}
+
+section.register form{
+    background-color: #FFF3F3;
+    width: 750px;
+    height: 650px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 30px;
+}
+
+section.register .container form .txt_field{
+    margin-top: 40px;
+}
+
+section.register .container form .txt_field input{
+    margin-left: 20px;
+    width: 480px;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #fff;
+    border-bottom: #C8BFBF 1px solid;
+    border-radius: 30px;
+}
+
+section.register .container form label{
+    margin-top: 12px;
+}
+
+section.register .container form .txt_field input[name="email"]{
+    margin-bottom: 35px;
+}
+
+section.register .container form input.submit{
+    width: 180px;
+    height: 55px;
+    margin-top: 20px;
+    background-color: #a0a0a0;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+section.login_text{
+    margin-top: 25px;
+    font-family: var(--prompt-font-family);
+    margin-bottom: 50px;
+}
+
+section.login_text .container p{
+    font-size: 15;
+    font-weight: 300;
+}
+
+section.login_text .container a{
+    text-decoration: underline;
+    font-size: 15;
+    font-weight: 300;
+}
+section.login_text .container a:hover{
+    color: #ec8b8b;
+}
+
+/* start main */
+
+section.welcometext{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #131313;
+    font-family: var(--prompt-font-family);
+}
+
+section.banner{
+    position: relative;
+    margin: 0 auto;
+    width: 1393px;
+    height: 459px;
+    background-image: url('../src/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section.popular{
+    font-family: var(--prompt-font-family);
+    margin-top: 15px;
+}
+
+section.popular p.title{
+    font-size: 25px;
+    font-weight: 500;
+    color: #131313;
+    text-align: left;
+}
+
+section.popular i{
+    position: relative;
+    top: 4.2px;
+}
+
+
+section.popular .card{
+    border: none;
+}
+
+section.popular h5{
+    font-size: 16px;
+    font-weight: 400;
+    color: #131313;
+}
+
+section.popular p{
+    font-size: 14px;
+    font-weight: 200;
+    color: #131313;
+}
+
+#recommend > div:nth-child(2){
+    background-color: var(--bg-pale-orange);
+}
+
+section.recommended{
+    font-family: var(--prompt-font-family);
+    margin-top: 15px;
+}
+
+section.recommended p.title{
+    font-size: 25px;
+    font-weight: 500;
+    color: #131313;
+    text-align: left;
+}
+
+section.recommended i{
+    position: relative;
+    top: 4.2px;
+}
+
+section.recommended .card{
+    border: none;
+}
+
+section.recommended h5{
+    font-size: 16px;
+    font-weight: 400;
+    color: #131313;
+}
+
+section.recommended p{
+    font-size: 14px;
+    font-weight: 200;
+    color: #131313;
+}
+
+#star{
+    background-color: var(--bg-pale-orange);
+}
+
+/* stop main */
+
+/* start footer */
+
+section.footer{
+    position: relative;
+    background-color: #fff;
+    font-family: var(--prompt-font-family);
+    box-shadow: 0px 0px 10px rgba(199, 199, 199, 0.5);
+    font-size: 14px;
+}
+
+section.footer p{
+    color: #131313;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+section.footer i{
+    position: relative;
+    top: 2.5px;
+}
+
+section.footer p:hover{
+    color: #ec8b8b;
+    transition: 0.25s ease-in-out;
+}
+
+section.footer p:after{
+    content: '';
+    position: absolute;
+    width: 50%;
+    transform: scaleX(0);
+    height: 2px;
+    margin-top: 30px;
+    left: 375px;
+    background-color: #ec8b8b;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+section.footer p:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* stop footer */
+
+/* start user summary */
+
+section.headline{
+    margin-top: 80px;
+    font-family: var(--prompt-font-family);
+    width: 100%;
+}
+
+section.headline .container{
+    display: inline-flex;
+}
+
+section.headline .container .container p{
+    font-size: 60px;
+    font-weight: 800;
+    color: #494646;
+}
+
+section.headline .container .container button{
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 30px;
+    width: 135px;
+    height: 55px;
+    background-color: #978F8F;
+    border: none;
+}
+
+section.headline .container .container button a{
+    color: #F5F2F2;
+}
+
+section.headline .container .container button:hover,section.headline .container .container button a:hover{
+    background-color: #FFF8F8;
+    color: #131313;
+}
+
+section.display{
+    font-family: var(--prompt-font-family);
+    display: inline-flex;
+    width: 100%;
+}
+
+section.display .container .row .col{
+    background-color: #F5F2F2;
+    width: 200px;
+    height: 250px;
+    margin-left: 120px;
+    border-radius: 30px;
+}
+
+section.display .container .row .col p{
+    text-align: center;
+    color: #383838;
+}
+
+section.display .container .row .col p.title{
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+section.display .container .row .col p.num{
+    margin-top: 100px;
+    font-size: 45px;
+    font-weight: 600;
+}
+
+section.table{
+    justify-content: space-between;
+    font-family: var(--prompt-font-family);
+    margin-top: 30px;
+    background-color: #F5F2F2;
+    border-radius: 50px;
+    padding-bottom: 50px;
+    margin-left: 70px;
+    width: 90%;
+    margin-top: 100px;
+}
+
+section.table .container .header p{
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+th,td{
+    padding-left: 90px;
+    border-collapse: collapse;
+    border-bottom: solid 1px #131313;
+}
+
+section.table .container .maintable{
+    width: 92%;
+    margin-left: 45px;
+}
+
+section.table table{
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+section.table .container .maintable button{
+    border: none;
+    background-color: rgb(255, 220, 220);
+    width: 175px;
+    height: 45px;
+    border-radius: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+section.table .container .maintable button a{
+    color: #131313;
+}
+
+/* end user summary */
+
+/* start borrow */
+section.headform form{
+    margin-top: 90px;
+    font-family: var(--prompt-font-family);
+}
+
+section.headform form .container{
+    margin-top: 15px;
+}
+
+section.headform form .container label[for="id"]{
+    margin-right: 30px;
+}
+section.headform form .container label[for="bookid"]{
+    margin-left: 0px;
+}
+
+section.headform form .container .container input#bookid{
+    margin-left: 38px;
+}
+section.headform form .container .container input#userid{
+    margin-left: 38px;
+}
+
+section.headform form .container .container button{
+    margin-top: 10px;
+    border: none;
+    background-color: #978F8F;
+    width: 120px;
+    height: 30px;
+    color: #F5F2F2;
+    border-radius: 30px;
+}
+
+section.detail{
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+    font-family: var(--prompt-font-family);
+    margin-bottom: 20px;
+}
+
+section.detail .container{
+    border-radius: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F5F2F2;
+}
+
+section.detail .container .container input{
+    border: none;
+    background-color: #F5F2F2;
+}
+
+section.borrow_form{
+    justify-content: inline-flex;
+    font-family: var(--prompt-font-family);
+}
+
+section.borrow_form form .container button{
+    background-color: #978F8F;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    height: 45px;
+    width: 120px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+/* end borrow */
+/* start turn in */
+
+section.total{
+    font-family: var(--prompt-font-family);
+}
+
+section.total .container{
+    margin-top: 15px;
+}
+
+section.total .container label{
+    margin-right: 10px;
+}
+
+section.total .container label[for="date"]{
+    margin-top: 2px;
+}
+
+section.total .container input{
+    border: none;
+    background-color: #F5F2F2;
+    border-radius: 30px;
+    margin-left: 20px;
+    padding-left: 30px;
+}
+
+section.turnin_form{
+    margin-top: 30px;
+    margin-bottom: 145px;
+    font-family: var(--prompt-font-family);
+}
+
+section.turnin_form form .container button{
+    background-color: #978F8F;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    height: 45px;
+    width: 240px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+section.turnin_form form .container a{
+background-color: rgba(0,0,0,0);
+border: none;
+}
+/* end turnin */
+
+/* start user manage */
+
+section.admin_header,section.user_main{
+    margin-top: 80px;
+    font-family: var(--prompt-font-family);
+}
+
+section.admin_header p{
+    font-size: 42px;
+    font-weight: 400;
+}
+section.user_main{
+    margin-bottom: 350px;
+}
+
+section.user_main .container .row .col-6{
+    background-color: #F5F2F2;
+    border-radius: 15px;
+}
+
+section.user_main .container table button{
+    border: none;
+    border-radius: 30px;
+}
+
+section.user_main .container table button.submit{
+    background-color: #8becb8;
+}
+
+section.user_main .container table button.delete{
+    background-color: #ec8b8b;
+}
+
+section.user_main .container input{
+    margin-top: 5px;
+}
+
+section.user_main .container form button.save{
+    margin-top: 5px;
+    background-color: #8becb8;
+    width: 120px;
+    height: 45px;
+    border: none;
+    border-radius: 30px;
+}
+
+/* end user manage */
+
+/* start book manage */
+
+section.detail_admin{
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+    font-family: var(--prompt-font-family);
+    margin-bottom: 20px;
+}
+
+section.detail_admin .container{
+    border-radius: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #F5F2F2;
+}
+
+section.detail_admin .container .container input{
+    border: none;
+    background-color: #ffffff;
+    border-bottom: #131313 1px solid;
+    width: 300px;
+    height: 35px;
+}
+
+section.detail_admin .container .container select{
+    border: none;
+    background-color: #ffffff;
+    border-bottom: #131313 1px solid;
+    width: 300px;
+    height: 35px;
+}
+
+section.detail_admin .container .container label{
+    margin-top: 7px;
+}
+
+/* start book type add */
+
+section.booktype{
+    font-family: var(--prompt-font-family);
+    margin-top: 75px;
+    margin-bottom: 240px;
+}
+
+section.booktype p{
+    text-align: center;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+section.booktype form{
+    background-color: #F5F2F2;
+    width: 500px;
+    height: 250px;
+    border-radius:  30px;
+    margin-top: 20px;
+}
+section.booktype form .container{
+    margin-top: 55px;
+
+}
+
+section.booktype form input{
+    width: 300px;
+    height: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+    border-radius: 30px;
+}
+
+section.booktype form button{
+    border: none;
+    width: 120px;
+    height: 35px;
+    background-color: #a0a0a0;
+    color: #fff;
+    font-weight: 300;
+    border: none;
+    border-radius: 30px;
+}
+
+/* setting */
+
+section.setting{
+    font-family: var(--prompt-font-family);
+}
+
+section.setting .container .card{
+    width: 820px;
+    height: 500px;
+    border: none;
+    margin-top: 50px;
+    margin-bottom: 95px;
+    border-radius: 30px;
+    background-color: #F5F2F2;
+}
+
+section.setting .container .card .title{
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 755px;
+    border-bottom: #131313 1px solid ;
+}
+
+section.setting .container .card input{
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+}
+section.setting .container .card label{
+    margin-top: 20px;
+}
+
+section.setting .container .card .botton{
+    margin-top: 20px;
+}
+
+section.setting .container .card .container .b input{
+    margin-top: 20px;
+    width: 125px;
+    height: 45px;
+    border-radius: 30px;
+}
+section.setting .container .card .container .b input[type="submit"]{
+    background-color: #5ec9ff;
+}
+section.setting .container .card .container .b input[type="reset"]{
+    background-color: #ff5e5e;
+}
