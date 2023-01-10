@@ -32,6 +32,10 @@ nav .title{
     font-weight: 700;
 }
 
+nav .title .navbar-brand:hover{
+    color: #ffc09f;
+}
+
 nav .title:hover{
     color: #ffc09b;
 }
