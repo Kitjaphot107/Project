@@ -33,7 +33,7 @@ nav .title{
 }
 
 nav .title:hover{
-    color: #5ec9ff;
+    color: #ffc09b;
 }
 
 nav .nav-items{
@@ -59,13 +59,13 @@ nav .nav-items ul li a:after, nav .title:after{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #5ec9ff;
+    background-color: #ffc09b;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
 
 nav .nav-items ul li:hover{
-    color: #777FDF;
+    color: #ffc09b;
     
 }
 
@@ -190,7 +190,7 @@ section.register_text .container a{
     font-weight: 300;
 }
 section.register_text .container a:hover{
-    color: #ec8b8b;
+    color: #ff833b;
 }
 
 section.register{
@@ -380,7 +380,10 @@ section.recommended p{
 /* start footer */
 
 section.footer{
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: #fff;
     font-family: var(--prompt-font-family);
     box-shadow: 0px 0px 10px rgba(199, 199, 199, 0.5);
@@ -399,7 +402,7 @@ section.footer i{
 }
 
 section.footer p:hover{
-    color: #ec8b8b;
+    color: #ffc09b;
     transition: 0.25s ease-in-out;
 }
 
@@ -411,7 +414,7 @@ section.footer p:after{
     height: 2px;
     margin-top: 30px;
     left: 375px;
-    background-color: #ec8b8b;
+    background-color: #ffc09b;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
